@@ -1,4 +1,4 @@
-## Real Estate Management System
+## AK Agency - Real Estate Management System
 
 ### Overview
 The Real Estate Management System is a comprehensive application designed to streamline the management of properties, clients, agents, and employees for a real estate business. Developed using C# in Visual Studio and leveraging Microsoft SQL Server as the database backend, this system offers robust functionalities to handle various aspects of real estate operations.
