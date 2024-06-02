@@ -24,7 +24,7 @@ namespace realmanagmentsystem {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class RemaxDataSet3 : global::System.Data.DataSet {
         
-        private HouseFeaturesDataTable tableHouseFeatures;
+        private ClientsDataTable tableClients;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace realmanagmentsystem {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["HouseFeatures"] != null)) {
-                    base.Tables.Add(new HouseFeaturesDataTable(ds.Tables["HouseFeatures"]));
+                if ((ds.Tables["Clients"] != null)) {
+                    base.Tables.Add(new ClientsDataTable(ds.Tables["Clients"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace realmanagmentsystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public HouseFeaturesDataTable HouseFeatures {
+        public ClientsDataTable Clients {
             get {
-                return this.tableHouseFeatures;
+                return this.tableClients;
             }
         }
         
@@ -152,8 +152,8 @@ namespace realmanagmentsystem {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["HouseFeatures"] != null)) {
-                    base.Tables.Add(new HouseFeaturesDataTable(ds.Tables["HouseFeatures"]));
+                if ((ds.Tables["Clients"] != null)) {
+                    base.Tables.Add(new ClientsDataTable(ds.Tables["Clients"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace realmanagmentsystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableHouseFeatures = ((HouseFeaturesDataTable)(base.Tables["HouseFeatures"]));
+            this.tableClients = ((ClientsDataTable)(base.Tables["Clients"]));
             if ((initTable == true)) {
-                if ((this.tableHouseFeatures != null)) {
-                    this.tableHouseFeatures.InitVars();
+                if ((this.tableClients != null)) {
+                    this.tableClients.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace realmanagmentsystem {
             this.Namespace = "http://tempuri.org/RemaxDataSet3.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableHouseFeatures = new HouseFeaturesDataTable();
-            base.Tables.Add(this.tableHouseFeatures);
+            this.tableClients = new ClientsDataTable();
+            base.Tables.Add(this.tableClients);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeHouseFeatures() {
+        private bool ShouldSerializeClients() {
             return false;
         }
         
@@ -270,41 +270,23 @@ namespace realmanagmentsystem {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void HouseFeaturesRowChangeEventHandler(object sender, HouseFeaturesRowChangeEvent e);
+        public delegate void ClientsRowChangeEventHandler(object sender, ClientsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class HouseFeaturesDataTable : global::System.Data.TypedTableBase<HouseFeaturesRow> {
+        public partial class ClientsDataTable : global::System.Data.TypedTableBase<ClientsRow> {
             
-            private global::System.Data.DataColumn columnEstateID;
+            private global::System.Data.DataColumn columnClientID;
             
-            private global::System.Data.DataColumn columnBuilding_Type;
-            
-            private global::System.Data.DataColumn columnBedRooms;
-            
-            private global::System.Data.DataColumn columnBuilt_in;
-            
-            private global::System.Data.DataColumn columnNeighbourhood;
-            
-            private global::System.Data.DataColumn columnAddress;
-            
-            private global::System.Data.DataColumn columnPrice;
-            
-            private global::System.Data.DataColumn columnImageUrl;
-            
-            private global::System.Data.DataColumn columnDescription;
-            
-            private global::System.Data.DataColumn columnPool;
-            
-            private global::System.Data.DataColumn columnElevator;
+            private global::System.Data.DataColumn columnClientName;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HouseFeaturesDataTable() {
-                this.TableName = "HouseFeatures";
+            public ClientsDataTable() {
+                this.TableName = "Clients";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -312,7 +294,7 @@ namespace realmanagmentsystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal HouseFeaturesDataTable(global::System.Data.DataTable table) {
+            internal ClientsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -329,96 +311,24 @@ namespace realmanagmentsystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected HouseFeaturesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ClientsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn EstateIDColumn {
+            public global::System.Data.DataColumn ClientIDColumn {
                 get {
-                    return this.columnEstateID;
+                    return this.columnClientID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Building_TypeColumn {
+            public global::System.Data.DataColumn ClientNameColumn {
                 get {
-                    return this.columnBuilding_Type;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn BedRoomsColumn {
-                get {
-                    return this.columnBedRooms;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Built_inColumn {
-                get {
-                    return this.columnBuilt_in;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NeighbourhoodColumn {
-                get {
-                    return this.columnNeighbourhood;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn AddressColumn {
-                get {
-                    return this.columnAddress;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PriceColumn {
-                get {
-                    return this.columnPrice;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ImageUrlColumn {
-                get {
-                    return this.columnImageUrl;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DescriptionColumn {
-                get {
-                    return this.columnDescription;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PoolColumn {
-                get {
-                    return this.columnPool;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ElevatorColumn {
-                get {
-                    return this.columnElevator;
+                    return this.columnClientName;
                 }
             }
             
@@ -433,62 +343,53 @@ namespace realmanagmentsystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HouseFeaturesRow this[int index] {
+            public ClientsRow this[int index] {
                 get {
-                    return ((HouseFeaturesRow)(this.Rows[index]));
+                    return ((ClientsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event HouseFeaturesRowChangeEventHandler HouseFeaturesRowChanging;
+            public event ClientsRowChangeEventHandler ClientsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event HouseFeaturesRowChangeEventHandler HouseFeaturesRowChanged;
+            public event ClientsRowChangeEventHandler ClientsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event HouseFeaturesRowChangeEventHandler HouseFeaturesRowDeleting;
+            public event ClientsRowChangeEventHandler ClientsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event HouseFeaturesRowChangeEventHandler HouseFeaturesRowDeleted;
+            public event ClientsRowChangeEventHandler ClientsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddHouseFeaturesRow(HouseFeaturesRow row) {
+            public void AddClientsRow(ClientsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HouseFeaturesRow AddHouseFeaturesRow(int EstateID, string Building_Type, int BedRooms, string Built_in, string Neighbourhood, string Address, decimal Price, string ImageUrl, string Description, string Pool, string Elevator) {
-                HouseFeaturesRow rowHouseFeaturesRow = ((HouseFeaturesRow)(this.NewRow()));
+            public ClientsRow AddClientsRow(string ClientName) {
+                ClientsRow rowClientsRow = ((ClientsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        EstateID,
-                        Building_Type,
-                        BedRooms,
-                        Built_in,
-                        Neighbourhood,
-                        Address,
-                        Price,
-                        ImageUrl,
-                        Description,
-                        Pool,
-                        Elevator};
-                rowHouseFeaturesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowHouseFeaturesRow);
-                return rowHouseFeaturesRow;
+                        null,
+                        ClientName};
+                rowClientsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowClientsRow);
+                return rowClientsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HouseFeaturesRow FindByEstateID(int EstateID) {
-                return ((HouseFeaturesRow)(this.Rows.Find(new object[] {
-                            EstateID})));
+            public ClientsRow FindByClientID(int ClientID) {
+                return ((ClientsRow)(this.Rows.Find(new object[] {
+                            ClientID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                HouseFeaturesDataTable cln = ((HouseFeaturesDataTable)(base.Clone()));
+                ClientsDataTable cln = ((ClientsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -496,88 +397,59 @@ namespace realmanagmentsystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new HouseFeaturesDataTable();
+                return new ClientsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnEstateID = base.Columns["EstateID"];
-                this.columnBuilding_Type = base.Columns["Building Type"];
-                this.columnBedRooms = base.Columns["BedRooms"];
-                this.columnBuilt_in = base.Columns["Built in"];
-                this.columnNeighbourhood = base.Columns["Neighbourhood"];
-                this.columnAddress = base.Columns["Address"];
-                this.columnPrice = base.Columns["Price"];
-                this.columnImageUrl = base.Columns["ImageUrl"];
-                this.columnDescription = base.Columns["Description"];
-                this.columnPool = base.Columns["Pool"];
-                this.columnElevator = base.Columns["Elevator"];
+                this.columnClientID = base.Columns["ClientID"];
+                this.columnClientName = base.Columns["ClientName"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnEstateID = new global::System.Data.DataColumn("EstateID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEstateID);
-                this.columnBuilding_Type = new global::System.Data.DataColumn("Building Type", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBuilding_Type);
-                this.columnBedRooms = new global::System.Data.DataColumn("BedRooms", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBedRooms);
-                this.columnBuilt_in = new global::System.Data.DataColumn("Built in", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnBuilt_in);
-                this.columnNeighbourhood = new global::System.Data.DataColumn("Neighbourhood", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNeighbourhood);
-                this.columnAddress = new global::System.Data.DataColumn("Address", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAddress);
-                this.columnPrice = new global::System.Data.DataColumn("Price", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPrice);
-                this.columnImageUrl = new global::System.Data.DataColumn("ImageUrl", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnImageUrl);
-                this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDescription);
-                this.columnPool = new global::System.Data.DataColumn("Pool", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPool);
-                this.columnElevator = new global::System.Data.DataColumn("Elevator", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnElevator);
+                this.columnClientID = new global::System.Data.DataColumn("ClientID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClientID);
+                this.columnClientName = new global::System.Data.DataColumn("ClientName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnClientName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnEstateID}, true));
-                this.columnEstateID.AllowDBNull = false;
-                this.columnEstateID.Unique = true;
-                this.columnBuilding_Type.MaxLength = 50;
-                this.columnBuilt_in.MaxLength = 10;
-                this.columnNeighbourhood.MaxLength = 50;
-                this.columnAddress.MaxLength = 100;
-                this.columnImageUrl.MaxLength = 255;
-                this.columnDescription.MaxLength = 255;
-                this.columnPool.MaxLength = 10;
-                this.columnElevator.MaxLength = 10;
+                                this.columnClientID}, true));
+                this.columnClientID.AutoIncrement = true;
+                this.columnClientID.AutoIncrementSeed = -1;
+                this.columnClientID.AutoIncrementStep = -1;
+                this.columnClientID.AllowDBNull = false;
+                this.columnClientID.ReadOnly = true;
+                this.columnClientID.Unique = true;
+                this.columnClientName.AllowDBNull = false;
+                this.columnClientName.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HouseFeaturesRow NewHouseFeaturesRow() {
-                return ((HouseFeaturesRow)(this.NewRow()));
+            public ClientsRow NewClientsRow() {
+                return ((ClientsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new HouseFeaturesRow(builder);
+                return new ClientsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(HouseFeaturesRow);
+                return typeof(ClientsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.HouseFeaturesRowChanged != null)) {
-                    this.HouseFeaturesRowChanged(this, new HouseFeaturesRowChangeEvent(((HouseFeaturesRow)(e.Row)), e.Action));
+                if ((this.ClientsRowChanged != null)) {
+                    this.ClientsRowChanged(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -585,8 +457,8 @@ namespace realmanagmentsystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.HouseFeaturesRowChanging != null)) {
-                    this.HouseFeaturesRowChanging(this, new HouseFeaturesRowChangeEvent(((HouseFeaturesRow)(e.Row)), e.Action));
+                if ((this.ClientsRowChanging != null)) {
+                    this.ClientsRowChanging(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -594,8 +466,8 @@ namespace realmanagmentsystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.HouseFeaturesRowDeleted != null)) {
-                    this.HouseFeaturesRowDeleted(this, new HouseFeaturesRowChangeEvent(((HouseFeaturesRow)(e.Row)), e.Action));
+                if ((this.ClientsRowDeleted != null)) {
+                    this.ClientsRowDeleted(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -603,14 +475,14 @@ namespace realmanagmentsystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.HouseFeaturesRowDeleting != null)) {
-                    this.HouseFeaturesRowDeleting(this, new HouseFeaturesRowChangeEvent(((HouseFeaturesRow)(e.Row)), e.Action));
+                if ((this.ClientsRowDeleting != null)) {
+                    this.ClientsRowDeleting(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveHouseFeaturesRow(HouseFeaturesRow row) {
+            public void RemoveClientsRow(ClientsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -637,7 +509,7 @@ namespace realmanagmentsystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "HouseFeaturesDataTable";
+                attribute2.FixedValue = "ClientsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -681,306 +553,37 @@ namespace realmanagmentsystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class HouseFeaturesRow : global::System.Data.DataRow {
+        public partial class ClientsRow : global::System.Data.DataRow {
             
-            private HouseFeaturesDataTable tableHouseFeatures;
+            private ClientsDataTable tableClients;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal HouseFeaturesRow(global::System.Data.DataRowBuilder rb) : 
+            internal ClientsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableHouseFeatures = ((HouseFeaturesDataTable)(this.Table));
+                this.tableClients = ((ClientsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int EstateID {
+            public int ClientID {
                 get {
-                    return ((int)(this[this.tableHouseFeatures.EstateIDColumn]));
+                    return ((int)(this[this.tableClients.ClientIDColumn]));
                 }
                 set {
-                    this[this.tableHouseFeatures.EstateIDColumn] = value;
+                    this[this.tableClients.ClientIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Building_Type {
+            public string ClientName {
                 get {
-                    try {
-                        return ((string)(this[this.tableHouseFeatures.Building_TypeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Building Type\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableClients.ClientNameColumn]));
                 }
                 set {
-                    this[this.tableHouseFeatures.Building_TypeColumn] = value;
+                    this[this.tableClients.ClientNameColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int BedRooms {
-                get {
-                    try {
-                        return ((int)(this[this.tableHouseFeatures.BedRoomsColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'BedRooms\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.BedRoomsColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Built_in {
-                get {
-                    try {
-                        return ((string)(this[this.tableHouseFeatures.Built_inColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Built in\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.Built_inColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Neighbourhood {
-                get {
-                    try {
-                        return ((string)(this[this.tableHouseFeatures.NeighbourhoodColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Neighbourhood\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.NeighbourhoodColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Address {
-                get {
-                    try {
-                        return ((string)(this[this.tableHouseFeatures.AddressColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Address\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.AddressColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal Price {
-                get {
-                    try {
-                        return ((decimal)(this[this.tableHouseFeatures.PriceColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Price\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.PriceColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string ImageUrl {
-                get {
-                    try {
-                        return ((string)(this[this.tableHouseFeatures.ImageUrlColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ImageUrl\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.ImageUrlColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Description {
-                get {
-                    try {
-                        return ((string)(this[this.tableHouseFeatures.DescriptionColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Description\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.DescriptionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Pool {
-                get {
-                    try {
-                        return ((string)(this[this.tableHouseFeatures.PoolColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Pool\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.PoolColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Elevator {
-                get {
-                    try {
-                        return ((string)(this[this.tableHouseFeatures.ElevatorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Elevator\' in table \'HouseFeatures\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableHouseFeatures.ElevatorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsBuilding_TypeNull() {
-                return this.IsNull(this.tableHouseFeatures.Building_TypeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetBuilding_TypeNull() {
-                this[this.tableHouseFeatures.Building_TypeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsBedRoomsNull() {
-                return this.IsNull(this.tableHouseFeatures.BedRoomsColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetBedRoomsNull() {
-                this[this.tableHouseFeatures.BedRoomsColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsBuilt_inNull() {
-                return this.IsNull(this.tableHouseFeatures.Built_inColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetBuilt_inNull() {
-                this[this.tableHouseFeatures.Built_inColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNeighbourhoodNull() {
-                return this.IsNull(this.tableHouseFeatures.NeighbourhoodColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNeighbourhoodNull() {
-                this[this.tableHouseFeatures.NeighbourhoodColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsAddressNull() {
-                return this.IsNull(this.tableHouseFeatures.AddressColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetAddressNull() {
-                this[this.tableHouseFeatures.AddressColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPriceNull() {
-                return this.IsNull(this.tableHouseFeatures.PriceColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPriceNull() {
-                this[this.tableHouseFeatures.PriceColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsImageUrlNull() {
-                return this.IsNull(this.tableHouseFeatures.ImageUrlColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetImageUrlNull() {
-                this[this.tableHouseFeatures.ImageUrlColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDescriptionNull() {
-                return this.IsNull(this.tableHouseFeatures.DescriptionColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDescriptionNull() {
-                this[this.tableHouseFeatures.DescriptionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPoolNull() {
-                return this.IsNull(this.tableHouseFeatures.PoolColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPoolNull() {
-                this[this.tableHouseFeatures.PoolColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsElevatorNull() {
-                return this.IsNull(this.tableHouseFeatures.ElevatorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetElevatorNull() {
-                this[this.tableHouseFeatures.ElevatorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -988,22 +591,22 @@ namespace realmanagmentsystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class HouseFeaturesRowChangeEvent : global::System.EventArgs {
+        public class ClientsRowChangeEvent : global::System.EventArgs {
             
-            private HouseFeaturesRow eventRow;
+            private ClientsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HouseFeaturesRowChangeEvent(HouseFeaturesRow row, global::System.Data.DataRowAction action) {
+            public ClientsRowChangeEvent(ClientsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HouseFeaturesRow Row {
+            public ClientsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1031,7 +634,7 @@ namespace realmanagmentsystem.RemaxDataSet3TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class HouseFeaturesTableAdapter : global::System.ComponentModel.Component {
+    public partial class ClientsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1045,7 +648,7 @@ namespace realmanagmentsystem.RemaxDataSet3TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public HouseFeaturesTableAdapter() {
+        public ClientsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1142,97 +745,27 @@ namespace realmanagmentsystem.RemaxDataSet3TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "HouseFeatures";
-            tableMapping.ColumnMappings.Add("EstateID", "EstateID");
-            tableMapping.ColumnMappings.Add("Building Type", "Building Type");
-            tableMapping.ColumnMappings.Add("BedRooms", "BedRooms");
-            tableMapping.ColumnMappings.Add("Built in", "Built in");
-            tableMapping.ColumnMappings.Add("Neighbourhood", "Neighbourhood");
-            tableMapping.ColumnMappings.Add("Address", "Address");
-            tableMapping.ColumnMappings.Add("Price", "Price");
-            tableMapping.ColumnMappings.Add("ImageUrl", "ImageUrl");
-            tableMapping.ColumnMappings.Add("Description", "Description");
-            tableMapping.ColumnMappings.Add("Pool", "Pool");
-            tableMapping.ColumnMappings.Add("Elevator", "Elevator");
+            tableMapping.DataSetTable = "Clients";
+            tableMapping.ColumnMappings.Add("ClientID", "ClientID");
+            tableMapping.ColumnMappings.Add("ClientName", "ClientName");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[HouseFeatures] WHERE (([EstateID] = @Original_EstateID) AND ((@IsNull_Building_Type = 1 AND [Building Type] IS NULL) OR ([Building Type] = @Original_Building_Type)) AND ((@IsNull_BedRooms = 1 AND [BedRooms] IS NULL) OR ([BedRooms] = @Original_BedRooms)) AND ((@IsNull_Built_in = 1 AND [Built in] IS NULL) OR ([Built in] = @Original_Built_in)) AND ((@IsNull_Neighbourhood = 1 AND [Neighbourhood] IS NULL) OR ([Neighbourhood] = @Original_Neighbourhood)) AND ((@IsNull_Address = 1 AND [Address] IS NULL) OR ([Address] = @Original_Address)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ImageUrl = 1 AND [ImageUrl] IS NULL) OR ([ImageUrl] = @Original_ImageUrl)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Pool = 1 AND [Pool] IS NULL) OR ([Pool] = @Original_Pool)) AND ((@IsNull_Elevator = 1 AND [Elevator] IS NULL) OR ([Elevator] = @Original_Elevator)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Clients] WHERE (([ClientID] = @Original_ClientID) AND ([Client" +
+                "Name] = @Original_ClientName))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EstateID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstateID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Building_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Building_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BedRooms", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedRooms", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BedRooms", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedRooms", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Built_in", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Built in", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Built_in", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Built in", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Neighbourhood", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Neighbourhood", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Neighbourhood", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Neighbourhood", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Address", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ImageUrl", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImageUrl", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ImageUrl", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImageUrl", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Description", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Pool", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pool", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pool", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pool", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Elevator", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Elevator", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Elevator", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Elevator", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[HouseFeatures] ([EstateID], [Building Type], [BedRooms], [Built in], [Neighbourhood], [Address], [Price], [ImageUrl], [Description], [Pool], [Elevator]) VALUES (@EstateID, @Building_Type, @BedRooms, @Built_in, @Neighbourhood, @Address, @Price, @ImageUrl, @Description, @Pool, @Elevator);
-SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, Price, ImageUrl, Description, Pool, Elevator FROM HouseFeatures WHERE (EstateID = @EstateID)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EstateID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstateID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Building_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BedRooms", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedRooms", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Built_in", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Built in", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Neighbourhood", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Neighbourhood", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImageUrl", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImageUrl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pool", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pool", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Elevator", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Elevator", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClientName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[HouseFeatures] SET [EstateID] = @EstateID, [Building Type] = @Building_Type, [BedRooms] = @BedRooms, [Built in] = @Built_in, [Neighbourhood] = @Neighbourhood, [Address] = @Address, [Price] = @Price, [ImageUrl] = @ImageUrl, [Description] = @Description, [Pool] = @Pool, [Elevator] = @Elevator WHERE (([EstateID] = @Original_EstateID) AND ((@IsNull_Building_Type = 1 AND [Building Type] IS NULL) OR ([Building Type] = @Original_Building_Type)) AND ((@IsNull_BedRooms = 1 AND [BedRooms] IS NULL) OR ([BedRooms] = @Original_BedRooms)) AND ((@IsNull_Built_in = 1 AND [Built in] IS NULL) OR ([Built in] = @Original_Built_in)) AND ((@IsNull_Neighbourhood = 1 AND [Neighbourhood] IS NULL) OR ([Neighbourhood] = @Original_Neighbourhood)) AND ((@IsNull_Address = 1 AND [Address] IS NULL) OR ([Address] = @Original_Address)) AND ((@IsNull_Price = 1 AND [Price] IS NULL) OR ([Price] = @Original_Price)) AND ((@IsNull_ImageUrl = 1 AND [ImageUrl] IS NULL) OR ([ImageUrl] = @Original_ImageUrl)) AND ((@IsNull_Description = 1 AND [Description] IS NULL) OR ([Description] = @Original_Description)) AND ((@IsNull_Pool = 1 AND [Pool] IS NULL) OR ([Pool] = @Original_Pool)) AND ((@IsNull_Elevator = 1 AND [Elevator] IS NULL) OR ([Elevator] = @Original_Elevator)));
-SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, Price, ImageUrl, Description, Pool, Elevator FROM HouseFeatures WHERE (EstateID = @EstateID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Clients] SET [ClientName] = @ClientName WHERE (([ClientID] = @Origi" +
+                "nal_ClientID) AND ([ClientName] = @Original_ClientName));\r\nSELECT ClientID, Clie" +
+                "ntName FROM Clients WHERE (ClientID = @ClientID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EstateID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstateID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Building_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building Type", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BedRooms", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedRooms", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Built_in", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Built in", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Neighbourhood", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Neighbourhood", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ImageUrl", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImageUrl", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Description", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Pool", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pool", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Elevator", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Elevator", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EstateID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EstateID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Building_Type", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building Type", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Building_Type", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Building Type", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BedRooms", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedRooms", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BedRooms", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedRooms", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Built_in", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Built in", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Built_in", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Built in", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Neighbourhood", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Neighbourhood", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Neighbourhood", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Neighbourhood", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Address", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Address", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Address", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Price", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ImageUrl", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImageUrl", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ImageUrl", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ImageUrl", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Description", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Description", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Description", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Pool", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pool", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Pool", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Pool", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Elevator", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Elevator", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Elevator", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Elevator", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClientName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ClientID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1248,8 +781,7 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, P" +
-                "rice, ImageUrl, Description, Pool, Elevator FROM dbo.HouseFeatures";
+            this._commandCollection[0].CommandText = "SELECT ClientID, ClientName FROM dbo.Clients";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1257,7 +789,7 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RemaxDataSet3.HouseFeaturesDataTable dataTable) {
+        public virtual int Fill(RemaxDataSet3.ClientsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1270,9 +802,9 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RemaxDataSet3.HouseFeaturesDataTable GetData() {
+        public virtual RemaxDataSet3.ClientsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            RemaxDataSet3.HouseFeaturesDataTable dataTable = new RemaxDataSet3.HouseFeaturesDataTable();
+            RemaxDataSet3.ClientsDataTable dataTable = new RemaxDataSet3.ClientsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1280,7 +812,7 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RemaxDataSet3.HouseFeaturesDataTable dataTable) {
+        public virtual int Update(RemaxDataSet3.ClientsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1288,7 +820,7 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(RemaxDataSet3 dataSet) {
-            return this.Adapter.Update(dataSet, "HouseFeatures");
+            return this.Adapter.Update(dataSet, "Clients");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1310,87 +842,13 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_EstateID, string Original_Building_Type, global::System.Nullable<int> Original_BedRooms, string Original_Built_in, string Original_Neighbourhood, string Original_Address, global::System.Nullable<decimal> Original_Price, string Original_ImageUrl, string Original_Description, string Original_Pool, string Original_Elevator) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_EstateID));
-            if ((Original_Building_Type == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+        public virtual int Delete(int Original_ClientID, string Original_ClientName) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ClientID));
+            if ((Original_ClientName == null)) {
+                throw new global::System.ArgumentNullException("Original_ClientName");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Building_Type));
-            }
-            if ((Original_BedRooms.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_BedRooms.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Built_in == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Built_in));
-            }
-            if ((Original_Neighbourhood == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Neighbourhood));
-            }
-            if ((Original_Address == null)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_Address));
-            }
-            if ((Original_Price.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_Price.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ImageUrl == null)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_ImageUrl));
-            }
-            if ((Original_Description == null)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_Description));
-            }
-            if ((Original_Pool == null)) {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[18].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_Pool));
-            }
-            if ((Original_Elevator == null)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_Elevator));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_ClientName));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1411,254 +869,22 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int EstateID, string Building_Type, global::System.Nullable<int> BedRooms, string Built_in, string Neighbourhood, string Address, global::System.Nullable<decimal> Price, string ImageUrl, string Description, string Pool, string Elevator) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(EstateID));
-            if ((Building_Type == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Building_Type));
-            }
-            if ((BedRooms.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(BedRooms.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Built_in == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(Built_in));
-            }
-            if ((Neighbourhood == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Neighbourhood));
-            }
-            if ((Address == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Address));
-            }
-            if ((Price.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(Price.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((ImageUrl == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(ImageUrl));
-            }
-            if ((Description == null)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(Description));
-            }
-            if ((Pool == null)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(Pool));
-            }
-            if ((Elevator == null)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(Elevator));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    int EstateID, 
-                    string Building_Type, 
-                    global::System.Nullable<int> BedRooms, 
-                    string Built_in, 
-                    string Neighbourhood, 
-                    string Address, 
-                    global::System.Nullable<decimal> Price, 
-                    string ImageUrl, 
-                    string Description, 
-                    string Pool, 
-                    string Elevator, 
-                    int Original_EstateID, 
-                    string Original_Building_Type, 
-                    global::System.Nullable<int> Original_BedRooms, 
-                    string Original_Built_in, 
-                    string Original_Neighbourhood, 
-                    string Original_Address, 
-                    global::System.Nullable<decimal> Original_Price, 
-                    string Original_ImageUrl, 
-                    string Original_Description, 
-                    string Original_Pool, 
-                    string Original_Elevator) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(EstateID));
-            if ((Building_Type == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+        public virtual int Update(string ClientName, int Original_ClientID, string Original_ClientName, int ClientID) {
+            if ((ClientName == null)) {
+                throw new global::System.ArgumentNullException("ClientName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Building_Type));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(ClientName));
             }
-            if ((BedRooms.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(BedRooms.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            if ((Built_in == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_ClientID));
+            if ((Original_ClientName == null)) {
+                throw new global::System.ArgumentNullException("Original_ClientName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Built_in));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_ClientName));
             }
-            if ((Neighbourhood == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Neighbourhood));
-            }
-            if ((Address == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Address));
-            }
-            if ((Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Price.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            if ((ImageUrl == null)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(ImageUrl));
-            }
-            if ((Description == null)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Description));
-            }
-            if ((Pool == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Pool));
-            }
-            if ((Elevator == null)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Elevator));
-            }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_EstateID));
-            if ((Original_Building_Type == null)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Building_Type));
-            }
-            if ((Original_BedRooms.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_BedRooms.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            if ((Original_Built_in == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_Built_in));
-            }
-            if ((Original_Neighbourhood == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Neighbourhood));
-            }
-            if ((Original_Address == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Address));
-            }
-            if ((Original_Price.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((decimal)(Original_Price.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            if ((Original_ImageUrl == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_ImageUrl));
-            }
-            if ((Original_Description == null)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_Description));
-            }
-            if ((Original_Pool == null)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_Pool));
-            }
-            if ((Original_Elevator == null)) {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_Elevator));
-            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(ClientID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1679,29 +905,8 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string Building_Type, 
-                    global::System.Nullable<int> BedRooms, 
-                    string Built_in, 
-                    string Neighbourhood, 
-                    string Address, 
-                    global::System.Nullable<decimal> Price, 
-                    string ImageUrl, 
-                    string Description, 
-                    string Pool, 
-                    string Elevator, 
-                    int Original_EstateID, 
-                    string Original_Building_Type, 
-                    global::System.Nullable<int> Original_BedRooms, 
-                    string Original_Built_in, 
-                    string Original_Neighbourhood, 
-                    string Original_Address, 
-                    global::System.Nullable<decimal> Original_Price, 
-                    string Original_ImageUrl, 
-                    string Original_Description, 
-                    string Original_Pool, 
-                    string Original_Elevator) {
-            return this.Update(Original_EstateID, Building_Type, BedRooms, Built_in, Neighbourhood, Address, Price, ImageUrl, Description, Pool, Elevator, Original_EstateID, Original_Building_Type, Original_BedRooms, Original_Built_in, Original_Neighbourhood, Original_Address, Original_Price, Original_ImageUrl, Original_Description, Original_Pool, Original_Elevator);
+        public virtual int Update(string ClientName, int Original_ClientID, string Original_ClientName) {
+            return this.Update(ClientName, Original_ClientID, Original_ClientName, Original_ClientID);
         }
     }
     
@@ -1717,7 +922,7 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         
         private UpdateOrderOption _updateOrder;
         
-        private HouseFeaturesTableAdapter _houseFeaturesTableAdapter;
+        private ClientsTableAdapter _clientsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1739,12 +944,12 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public HouseFeaturesTableAdapter HouseFeaturesTableAdapter {
+        public ClientsTableAdapter ClientsTableAdapter {
             get {
-                return this._houseFeaturesTableAdapter;
+                return this._clientsTableAdapter;
             }
             set {
-                this._houseFeaturesTableAdapter = value;
+                this._clientsTableAdapter = value;
             }
         }
         
@@ -1767,9 +972,9 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._houseFeaturesTableAdapter != null) 
-                            && (this._houseFeaturesTableAdapter.Connection != null))) {
-                    return this._houseFeaturesTableAdapter.Connection;
+                if (((this._clientsTableAdapter != null) 
+                            && (this._clientsTableAdapter.Connection != null))) {
+                    return this._clientsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1784,7 +989,7 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._houseFeaturesTableAdapter != null)) {
+                if ((this._clientsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1798,12 +1003,12 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(RemaxDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._houseFeaturesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.HouseFeatures.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._clientsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._houseFeaturesTableAdapter.Update(updatedRows));
+                    result = (result + this._clientsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1817,11 +1022,11 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(RemaxDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._houseFeaturesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.HouseFeatures.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._clientsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._houseFeaturesTableAdapter.Update(addedRows));
+                    result = (result + this._clientsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1835,11 +1040,11 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(RemaxDataSet3 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._houseFeaturesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.HouseFeatures.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._clientsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._houseFeaturesTableAdapter.Update(deletedRows));
+                    result = (result + this._clientsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1882,8 +1087,8 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._houseFeaturesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._houseFeaturesTableAdapter.Connection) == false))) {
+            if (((this._clientsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._clientsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1919,13 +1124,13 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._houseFeaturesTableAdapter != null)) {
-                    revertConnections.Add(this._houseFeaturesTableAdapter, this._houseFeaturesTableAdapter.Connection);
-                    this._houseFeaturesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._houseFeaturesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._houseFeaturesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._houseFeaturesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._houseFeaturesTableAdapter.Adapter);
+                if ((this._clientsTableAdapter != null)) {
+                    revertConnections.Add(this._clientsTableAdapter, this._clientsTableAdapter.Connection);
+                    this._clientsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._clientsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._clientsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._clientsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._clientsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1986,9 +1191,9 @@ SELECT EstateID, [Building Type], BedRooms, [Built in], Neighbourhood, Address, 
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._houseFeaturesTableAdapter != null)) {
-                    this._houseFeaturesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._houseFeaturesTableAdapter]));
-                    this._houseFeaturesTableAdapter.Transaction = null;
+                if ((this._clientsTableAdapter != null)) {
+                    this._clientsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._clientsTableAdapter]));
+                    this._clientsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

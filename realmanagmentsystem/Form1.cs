@@ -13,8 +13,7 @@ namespace realmanagmentsystem
 {
     public partial class Form1 : Form
     {
-       
-        public string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Remax;Integrated Security=True;Encrypt=False";
+        public string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=Remax;Integrated Security=True;Encrypt=False";
         public Form1()
         {
             InitializeComponent();

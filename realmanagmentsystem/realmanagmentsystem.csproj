@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClient.Designer.cs">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addproper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addproper.Designer.cs">
+      <DependentUpon>Addproper.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,16 +109,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RemaxDataSet5.xsd</DependentUpon>
     </Compile>
-    <Compile Include="RemaxDataSet6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RemaxDataSet6.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="RemaxDataSet7.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RemaxDataSet7.xsd</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="AddClient.resx">
+      <DependentUpon>AddClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addproper.resx">
+      <DependentUpon>Addproper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,28 +207,6 @@
     </None>
     <None Include="RemaxDataSet5.xss">
       <DependentUpon>RemaxDataSet5.xsd</DependentUpon>
-    </None>
-    <None Include="RemaxDataSet6.xsc">
-      <DependentUpon>RemaxDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="RemaxDataSet6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RemaxDataSet6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RemaxDataSet6.xss">
-      <DependentUpon>RemaxDataSet6.xsd</DependentUpon>
-    </None>
-    <None Include="RemaxDataSet7.xsc">
-      <DependentUpon>RemaxDataSet7.xsd</DependentUpon>
-    </None>
-    <None Include="RemaxDataSet7.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>RemaxDataSet7.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="RemaxDataSet7.xss">
-      <DependentUpon>RemaxDataSet7.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

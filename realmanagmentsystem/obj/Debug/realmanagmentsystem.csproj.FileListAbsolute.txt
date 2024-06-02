@@ -18,15 +18,31 @@ C:\Users\mahmo\Downloads\realmanagmentsystem\realmanagmentsystem\obj\Debug\realm
 C:\Users\mahmo\Downloads\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.CoreCompileInputs.cache
 C:\Users\mahmo\Downloads\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.exe
 C:\Users\mahmo\Downloads\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.pdb
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.exe.config
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.exe
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.pdb
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.AssemblyReference.cache
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.AdminDashboardForm.resources
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.EmployeeDashboardForm.resources
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.Form1.resources
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.Properties.Resources.resources
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.GenerateResource.cache
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.CoreCompileInputs.cache
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.exe
-C:\Users\Dell PC\Desktop\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.pdb
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.AssemblyReference.cache
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.AdminDashboardForm.resources
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.EmployeeDashboardForm.resources
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.Form1.resources
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.Properties.Resources.resources
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.GenerateResource.cache
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.CoreCompileInputs.cache
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.exe
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.pdb
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.AddClient.resources
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.exe.config
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.exe
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.pdb
+C:\Users\user01\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.Addproper.resources
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.exe.config
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.exe
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\bin\Debug\realmanagmentsystem.pdb
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.AssemblyReference.cache
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.AddClient.resources
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.Addproper.resources
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.AdminDashboardForm.resources
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.EmployeeDashboardForm.resources
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.Form1.resources
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.Properties.Resources.resources
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.GenerateResource.cache
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.csproj.CoreCompileInputs.cache
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.exe
+C:\Users\Dell PC\Desktop\New folder (8)\realmanagmentsystem\realmanagmentsystem\obj\Debug\realmanagmentsystem.pdb

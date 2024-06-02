@@ -24,7 +24,7 @@ namespace realmanagmentsystem {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class RemaxDataSet5 : global::System.Data.DataSet {
         
-        private ClientsDataTable tableClients;
+        private BranchesDataTable tableBranches;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace realmanagmentsystem {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Clients"] != null)) {
-                    base.Tables.Add(new ClientsDataTable(ds.Tables["Clients"]));
+                if ((ds.Tables["Branches"] != null)) {
+                    base.Tables.Add(new BranchesDataTable(ds.Tables["Branches"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace realmanagmentsystem {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ClientsDataTable Clients {
+        public BranchesDataTable Branches {
             get {
-                return this.tableClients;
+                return this.tableBranches;
             }
         }
         
@@ -152,8 +152,8 @@ namespace realmanagmentsystem {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Clients"] != null)) {
-                    base.Tables.Add(new ClientsDataTable(ds.Tables["Clients"]));
+                if ((ds.Tables["Branches"] != null)) {
+                    base.Tables.Add(new BranchesDataTable(ds.Tables["Branches"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace realmanagmentsystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableClients = ((ClientsDataTable)(base.Tables["Clients"]));
+            this.tableBranches = ((BranchesDataTable)(base.Tables["Branches"]));
             if ((initTable == true)) {
-                if ((this.tableClients != null)) {
-                    this.tableClients.InitVars();
+                if ((this.tableBranches != null)) {
+                    this.tableBranches.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace realmanagmentsystem {
             this.Namespace = "http://tempuri.org/RemaxDataSet5.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableClients = new ClientsDataTable();
-            base.Tables.Add(this.tableClients);
+            this.tableBranches = new BranchesDataTable();
+            base.Tables.Add(this.tableBranches);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeClients() {
+        private bool ShouldSerializeBranches() {
             return false;
         }
         
@@ -270,21 +270,23 @@ namespace realmanagmentsystem {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ClientsRowChangeEventHandler(object sender, ClientsRowChangeEvent e);
+        public delegate void BranchesRowChangeEventHandler(object sender, BranchesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ClientsDataTable : global::System.Data.TypedTableBase<ClientsRow> {
+        public partial class BranchesDataTable : global::System.Data.TypedTableBase<BranchesRow> {
             
-            private global::System.Data.DataColumn columnClientID;
+            private global::System.Data.DataColumn columnBranchID;
+            
+            private global::System.Data.DataColumn columnLocation;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientsDataTable() {
-                this.TableName = "Clients";
+            public BranchesDataTable() {
+                this.TableName = "Branches";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -292,7 +294,7 @@ namespace realmanagmentsystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ClientsDataTable(global::System.Data.DataTable table) {
+            internal BranchesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -309,16 +311,24 @@ namespace realmanagmentsystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ClientsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BranchesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ClientIDColumn {
+            public global::System.Data.DataColumn BranchIDColumn {
                 get {
-                    return this.columnClientID;
+                    return this.columnBranchID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn LocationColumn {
+                get {
+                    return this.columnLocation;
                 }
             }
             
@@ -333,52 +343,53 @@ namespace realmanagmentsystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientsRow this[int index] {
+            public BranchesRow this[int index] {
                 get {
-                    return ((ClientsRow)(this.Rows[index]));
+                    return ((BranchesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowChanging;
+            public event BranchesRowChangeEventHandler BranchesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowChanged;
+            public event BranchesRowChangeEventHandler BranchesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowDeleting;
+            public event BranchesRowChangeEventHandler BranchesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ClientsRowChangeEventHandler ClientsRowDeleted;
+            public event BranchesRowChangeEventHandler BranchesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddClientsRow(ClientsRow row) {
+            public void AddBranchesRow(BranchesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientsRow AddClientsRow() {
-                ClientsRow rowClientsRow = ((ClientsRow)(this.NewRow()));
+            public BranchesRow AddBranchesRow(string Location) {
+                BranchesRow rowBranchesRow = ((BranchesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null};
-                rowClientsRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowClientsRow);
-                return rowClientsRow;
+                        null,
+                        Location};
+                rowBranchesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBranchesRow);
+                return rowBranchesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientsRow FindByClientID(int ClientID) {
-                return ((ClientsRow)(this.Rows.Find(new object[] {
-                            ClientID})));
+            public BranchesRow FindByBranchID(int BranchID) {
+                return ((BranchesRow)(this.Rows.Find(new object[] {
+                            BranchID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ClientsDataTable cln = ((ClientsDataTable)(base.Clone()));
+                BranchesDataTable cln = ((BranchesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -386,54 +397,59 @@ namespace realmanagmentsystem {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ClientsDataTable();
+                return new BranchesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnClientID = base.Columns["ClientID"];
+                this.columnBranchID = base.Columns["BranchID"];
+                this.columnLocation = base.Columns["Location"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnClientID = new global::System.Data.DataColumn("ClientID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnClientID);
+                this.columnBranchID = new global::System.Data.DataColumn("BranchID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnBranchID);
+                this.columnLocation = new global::System.Data.DataColumn("Location", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLocation);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnClientID}, true));
-                this.columnClientID.AutoIncrement = true;
-                this.columnClientID.AutoIncrementSeed = -1;
-                this.columnClientID.AutoIncrementStep = -1;
-                this.columnClientID.AllowDBNull = false;
-                this.columnClientID.ReadOnly = true;
-                this.columnClientID.Unique = true;
+                                this.columnBranchID}, true));
+                this.columnBranchID.AutoIncrement = true;
+                this.columnBranchID.AutoIncrementSeed = -1;
+                this.columnBranchID.AutoIncrementStep = -1;
+                this.columnBranchID.AllowDBNull = false;
+                this.columnBranchID.ReadOnly = true;
+                this.columnBranchID.Unique = true;
+                this.columnLocation.AllowDBNull = false;
+                this.columnLocation.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientsRow NewClientsRow() {
-                return ((ClientsRow)(this.NewRow()));
+            public BranchesRow NewBranchesRow() {
+                return ((BranchesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ClientsRow(builder);
+                return new BranchesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ClientsRow);
+                return typeof(BranchesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ClientsRowChanged != null)) {
-                    this.ClientsRowChanged(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.BranchesRowChanged != null)) {
+                    this.BranchesRowChanged(this, new BranchesRowChangeEvent(((BranchesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -441,8 +457,8 @@ namespace realmanagmentsystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ClientsRowChanging != null)) {
-                    this.ClientsRowChanging(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.BranchesRowChanging != null)) {
+                    this.BranchesRowChanging(this, new BranchesRowChangeEvent(((BranchesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -450,8 +466,8 @@ namespace realmanagmentsystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ClientsRowDeleted != null)) {
-                    this.ClientsRowDeleted(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.BranchesRowDeleted != null)) {
+                    this.BranchesRowDeleted(this, new BranchesRowChangeEvent(((BranchesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -459,14 +475,14 @@ namespace realmanagmentsystem {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ClientsRowDeleting != null)) {
-                    this.ClientsRowDeleting(this, new ClientsRowChangeEvent(((ClientsRow)(e.Row)), e.Action));
+                if ((this.BranchesRowDeleting != null)) {
+                    this.BranchesRowDeleting(this, new BranchesRowChangeEvent(((BranchesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveClientsRow(ClientsRow row) {
+            public void RemoveBranchesRow(BranchesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -493,7 +509,7 @@ namespace realmanagmentsystem {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ClientsDataTable";
+                attribute2.FixedValue = "BranchesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -537,25 +553,36 @@ namespace realmanagmentsystem {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ClientsRow : global::System.Data.DataRow {
+        public partial class BranchesRow : global::System.Data.DataRow {
             
-            private ClientsDataTable tableClients;
+            private BranchesDataTable tableBranches;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ClientsRow(global::System.Data.DataRowBuilder rb) : 
+            internal BranchesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableClients = ((ClientsDataTable)(this.Table));
+                this.tableBranches = ((BranchesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int ClientID {
+            public int BranchID {
                 get {
-                    return ((int)(this[this.tableClients.ClientIDColumn]));
+                    return ((int)(this[this.tableBranches.BranchIDColumn]));
                 }
                 set {
-                    this[this.tableClients.ClientIDColumn] = value;
+                    this[this.tableBranches.BranchIDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Location {
+                get {
+                    return ((string)(this[this.tableBranches.LocationColumn]));
+                }
+                set {
+                    this[this.tableBranches.LocationColumn] = value;
                 }
             }
         }
@@ -564,22 +591,22 @@ namespace realmanagmentsystem {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ClientsRowChangeEvent : global::System.EventArgs {
+        public class BranchesRowChangeEvent : global::System.EventArgs {
             
-            private ClientsRow eventRow;
+            private BranchesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientsRowChangeEvent(ClientsRow row, global::System.Data.DataRowAction action) {
+            public BranchesRowChangeEvent(BranchesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ClientsRow Row {
+            public BranchesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -607,7 +634,7 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ClientsTableAdapter : global::System.ComponentModel.Component {
+    public partial class BranchesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -621,7 +648,7 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ClientsTableAdapter() {
+        public BranchesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -718,14 +745,33 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Clients";
-            tableMapping.ColumnMappings.Add("ClientID", "ClientID");
+            tableMapping.DataSetTable = "Branches";
+            tableMapping.ColumnMappings.Add("BranchID", "BranchID");
+            tableMapping.ColumnMappings.Add("Location", "Location");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Clients] WHERE (([ClientID] = @Original_ClientID))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Branches] WHERE (([BranchID] = @Original_BranchID) AND ([Locat" +
+                "ion] = @Original_Location))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ClientID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ClientID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BranchID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Location", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Branches] ([Location]) VALUES (@Location);\r\nSELECT BranchID, L" +
+                "ocation FROM Branches WHERE (BranchID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Location", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Branches] SET [Location] = @Location WHERE (([BranchID] = @Original" +
+                "_BranchID) AND ([Location] = @Original_Location));\r\nSELECT BranchID, Location FR" +
+                "OM Branches WHERE (BranchID = @BranchID)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Location", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BranchID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BranchID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Location", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Location", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BranchID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "BranchID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -741,7 +787,7 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ClientID FROM dbo.Clients";
+            this._commandCollection[0].CommandText = "SELECT BranchID, Location FROM dbo.Branches";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -749,7 +795,7 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(RemaxDataSet5.ClientsDataTable dataTable) {
+        public virtual int Fill(RemaxDataSet5.BranchesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -762,9 +808,9 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual RemaxDataSet5.ClientsDataTable GetData() {
+        public virtual RemaxDataSet5.BranchesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            RemaxDataSet5.ClientsDataTable dataTable = new RemaxDataSet5.ClientsDataTable();
+            RemaxDataSet5.BranchesDataTable dataTable = new RemaxDataSet5.BranchesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -772,7 +818,7 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(RemaxDataSet5.ClientsDataTable dataTable) {
+        public virtual int Update(RemaxDataSet5.BranchesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -780,7 +826,7 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(RemaxDataSet5 dataSet) {
-            return this.Adapter.Update(dataSet, "Clients");
+            return this.Adapter.Update(dataSet, "Branches");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -802,8 +848,14 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ClientID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ClientID));
+        public virtual int Delete(int Original_BranchID, string Original_Location) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_BranchID));
+            if ((Original_Location == null)) {
+                throw new global::System.ArgumentNullException("Original_Location");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Location));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -819,6 +871,76 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Location) {
+            if ((Location == null)) {
+                throw new global::System.ArgumentNullException("Location");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Location));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Location, int Original_BranchID, string Original_Location, int BranchID) {
+            if ((Location == null)) {
+                throw new global::System.ArgumentNullException("Location");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Location));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_BranchID));
+            if ((Original_Location == null)) {
+                throw new global::System.ArgumentNullException("Original_Location");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Location));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(BranchID));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Location, int Original_BranchID, string Original_Location) {
+            return this.Update(Location, Original_BranchID, Original_Location, Original_BranchID);
+        }
     }
     
     /// <summary>
@@ -833,7 +955,7 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private ClientsTableAdapter _clientsTableAdapter;
+        private BranchesTableAdapter _branchesTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -855,12 +977,12 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ClientsTableAdapter ClientsTableAdapter {
+        public BranchesTableAdapter BranchesTableAdapter {
             get {
-                return this._clientsTableAdapter;
+                return this._branchesTableAdapter;
             }
             set {
-                this._clientsTableAdapter = value;
+                this._branchesTableAdapter = value;
             }
         }
         
@@ -883,9 +1005,9 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._clientsTableAdapter != null) 
-                            && (this._clientsTableAdapter.Connection != null))) {
-                    return this._clientsTableAdapter.Connection;
+                if (((this._branchesTableAdapter != null) 
+                            && (this._branchesTableAdapter.Connection != null))) {
+                    return this._branchesTableAdapter.Connection;
                 }
                 return null;
             }
@@ -900,7 +1022,7 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._clientsTableAdapter != null)) {
+                if ((this._branchesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -914,12 +1036,12 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(RemaxDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._branchesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Branches.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(updatedRows));
+                    result = (result + this._branchesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -933,11 +1055,11 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(RemaxDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._branchesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Branches.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(addedRows));
+                    result = (result + this._branchesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -951,11 +1073,11 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(RemaxDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._clientsTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Clients.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._branchesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Branches.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._clientsTableAdapter.Update(deletedRows));
+                    result = (result + this._branchesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -998,8 +1120,8 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._clientsTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._clientsTableAdapter.Connection) == false))) {
+            if (((this._branchesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._branchesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1035,13 +1157,13 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._clientsTableAdapter != null)) {
-                    revertConnections.Add(this._clientsTableAdapter, this._clientsTableAdapter.Connection);
-                    this._clientsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._clientsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._clientsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._clientsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._clientsTableAdapter.Adapter);
+                if ((this._branchesTableAdapter != null)) {
+                    revertConnections.Add(this._branchesTableAdapter, this._branchesTableAdapter.Connection);
+                    this._branchesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._branchesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._branchesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._branchesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._branchesTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1102,9 +1224,9 @@ namespace realmanagmentsystem.RemaxDataSet5TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._clientsTableAdapter != null)) {
-                    this._clientsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._clientsTableAdapter]));
-                    this._clientsTableAdapter.Transaction = null;
+                if ((this._branchesTableAdapter != null)) {
+                    this._branchesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._branchesTableAdapter]));
+                    this._branchesTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
